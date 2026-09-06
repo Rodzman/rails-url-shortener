@@ -1,0 +1,15 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Redirect",
+      "warning_code": 18,
+      "fingerprint": "1e51abc70a52939b07e49b8e5a2a9d17f39b6a80ab140fb04c5175a9cd553a48",
+      "check_name": "Redirect",
+      "message": "Possible unprotected redirect",
+      "file": "app/controllers/redirects_controller.rb",
+      "line": 10,
+      "note": "Intentional: a URL shortener must redirect to arbitrary hosts. The target is validated on write (Link#original_url_must_be_http allows only http/https with a host) and is never taken from the request."
+    }
+  ],
+  "brakeman_version": "8.0.6"
+}

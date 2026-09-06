@@ -1,0 +1,19 @@
+# Rails
+/.bundle
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+/tmp/pids/*
+!/tmp/pids/.keep
+/storage/*
+!/storage/.keep
+/db/*.sqlite3
+/db/*.sqlite3-*
+/public/assets
+.byebug_history
+
+# Secrets: never commit the master key.
+/config/master.key
+/config/credentials/*.key
+.env*
