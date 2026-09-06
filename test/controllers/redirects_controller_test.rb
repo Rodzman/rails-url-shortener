@@ -26,7 +26,12 @@ class RedirectsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "slugs outside the allowed format do not match the route" do
+    Link.create!(original_url: "https://example.com", slug: "abc")
     get "/a"
     assert_response :not_found
+    # Rails anchors segment constraints, so a valid substring is not enough.
+    get "/abc!"
+    assert_response :not_found
+    assert_equal 0, Click.count
   end
 end
